@@ -1,0 +1,408 @@
+:root {
+    --dark: #101619;
+    --green: #A3F34F;
+    --white: #FFFFFF;
+    --light-grey: #F3F4F4;
+    --card-dark: #22292C;
+    --text-grey: #555D60;
+    --forest-green:#228B22;
+    --deep-green:#006B3C;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header and navbar */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: fixed;
+  width:100%;
+  z-index: 1;
+  top:0px;
+  background-color: #101619;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color:var(--white);
+}
+.illumination{
+    color:var(--green);
+}
+
+.icons{
+    font-size: 2rem;
+    color:var(--green);
+    cursor:pointer;
+    display:none;
+}
+#check{
+    display:none;
+}
+
+
+
+.links{
+    text-decoration: none;
+    color:var(--white);
+    margin-left: 2.5rem;
+    font-size: 1.15rem;
+    font-weight: bolder;
+}
+
+.links:hover{
+    color:var(--green);
+}
+
+/* header and navbar */
+
+/* banner */
+
+.home{
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('./images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;/* Makes banner fill the viewport cleanly */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 8% 60px; /* Clears the fixed header on top and uses % side padding */
+
+}
+
+#head2{
+    
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+     
+}
+
+#head1{
+    
+   
+    color: var(--white);
+    font-size: 3.75rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    
+}
+
+
+#subHead{
+    
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-weight: bolder;
+    max-width: 600px
+}
+/* banner */
+
+.about-parent{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+
+    
+}
+
+.about-img{
+   height: 500px;
+   width: 100%;
+   object-fit: cover;
+   object-position: top;
+}
+.about-column{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex:1;
+   padding: 30px;
+}
+.about-text{
+    text-align: justify;
+    line-height: 1.5;
+    padding-right: 50px;
+    margin: 10px;
+    color: var(--text-grey);
+    font-size: 18px;
+}
+/* about */
+
+
+
+
+
+
+
+
+/* about */
+
+
+
+
+
+/* our programs */
+
+.section-head{
+    text-align: center;
+    color:var(--forest-green);
+    font-weight: bolder;
+    padding-top:50px;
+}
+
+.section-subhead{
+   text-align: center;
+    color:var(--dark);
+    font-weight: bolder;
+    
+}
+
+.parent{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    gap: 20px;
+    flex-wrap: nowrap;
+
+}
+.card{
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Keeps the image pinned to the top edge */
+    align-items: center;
+    flex:1;/* Forces all 4 cards to have the exact same width */
+    overflow: hidden;
+    margin: 10px;
+    border:1px solid #e5e7eb ;
+    border-radius: 10px;
+    background-color: var(--light-grey);
+    
+}
+
+.card-img{
+width: 100%;
+height: 300px;
+object-fit:cover;
+object-position: top;/* Prevents heads from being cropped off in Cardio & Trainer */
+
+}
+
+.card h3{
+    padding-top: 20px;
+}
+.card p{
+    padding: 20px;
+    color:var(--text-grey);
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+
+
+/* our programs */
+
+
+/* footer */
+
+.footer-parent{
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--dark);
+    padding: 40px 20px;
+    flex-wrap: nowrap;
+}
+.footer-child{
+    color:var(--white);
+     display:flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     
+}
+.footer-child h4 {
+    margin-bottom: 12px;     /* Consistent gap below "Quick Links" and "Contact Us" */
+}
+.footer-navbar{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.footer-links{
+    
+    text-decoration: none;
+    color:var(--white);
+    margin-bottom: 8px;
+    
+    
+}
+
+
+
+.footer-text {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    display: flex;           /* Keeps icons and text cleanly aligned */
+    align-items: center;
+    gap: 8px;                /* Adds uniform space between icon and text */
+}
+
+
+
+/* footer */
+
+
+/* media queries */
+
+@media (max-width:769px){
+    .header {
+        z-index: 1000; /* Keeps header and dropdown above all page content */
+    }
+
+     .icons{
+        display:inline-flex;
+    }
+    #close{
+        display:none;
+    }
+
+    #check:checked~.icons #close{
+        display:block;
+    }
+     #check:checked~.icons #menu{
+        display:none;
+    }
+
+    #check:checked~.navbar{
+        display: block;
+    }
+
+    .navbar{
+        position:absolute;
+        top:100%;
+        left:0px;
+        width:100%;
+        display:none;
+        background-color:#22292C;
+    }
+
+    .links{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0; /* Removes the 2.5rem desktop left margin so links center properly */
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+   .home {
+        min-height: 80vh;
+        padding: 110px 20px 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #head2 {
+        font-size: 0.95rem;
+    }
+
+    #head1 {
+        font-size: 2.1rem; /* Fits "PUSH YOUR LIMITS" cleanly without 1-word line breaks */
+    }
+
+    #subHead {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+  .parent {
+       
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 20px; 
+    }
+
+    .card{
+        width:100%
+    }
+
+
+   
+ .section-head{
+    text-align: center;
+    color:var(--forest-green);
+    font-weight: bolder;
+    padding-top:50px;
+    font-size: 30px;
+}
+
+.section-subhead{
+   text-align: center;
+    color:var(--dark);
+    font-weight: bolder;
+    font-size: 20px;
+}
+.about-parent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+    
+}
+.about-text{
+    text-align: justify;
+    line-height: 1.5;
+    margin: 10px;
+    color: var(--text-grey);
+    font-size: 18px;
+}
+
+.footer-parent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-child{
+    color:var(--white);
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     margin: 10px;
+}
+
+
+
+}
+
